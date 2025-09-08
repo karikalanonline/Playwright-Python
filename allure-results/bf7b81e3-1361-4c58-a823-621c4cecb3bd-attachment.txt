@@ -1,0 +1,7 @@
+[32mINFO    [0m PlaywrightAutomation:base_page.py:28 Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+[32mINFO    [0m PlaywrightAutomation:login_page.py:15 Login to the application with valid username and password
+[32mINFO    [0m PlaywrightAutomation:salesforce_home_page.py:29 Attempting to switch to Lightning...
+[32mINFO    [0m PlaywrightAutomation:salesforce_home_page.py:38 Already in Lightning
+[32mINFO    [0m PlaywrightAutomation:salesforce_admin_page.py:18 proxy logging in as Immigration Test Business User1
+[32mINFO    [0m PlaywrightAutomation:base_page.py:86 Clicking the app launcher icon
+[32mINFO    [0m PlaywrightAutomation:salesforce_home_page.py:46 Searching the IXT Mailbox APP via app launcher
