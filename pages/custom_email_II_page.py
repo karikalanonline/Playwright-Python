@@ -148,7 +148,7 @@
 # pages/custom_email_II_page.py
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from base.base_page import BasePage
-import time
+import time, allure
 
 
 class CustomEmailPage(BasePage):
@@ -254,6 +254,11 @@ class CustomEmailPage(BasePage):
 
     def assert_email_status(self, expected: str = "Sent"):
         actual = self.get_status_value()
+        allure.attach(
+            f"Expected: {expected}\nActual: {actual}",
+            name="Email Status Verification",
+            attachment_type=allure.attachment_type.TEXT,
+        )
         assert (
             actual == expected
         ), f"Email status expected '{expected}' but got '{actual}'"

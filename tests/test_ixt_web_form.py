@@ -42,15 +42,6 @@ with open("data/case_details.json") as f:
 def test_verify_case_details(
     mailbox_record_page_business: MailboxSyncRecordPage, expected
 ):
-    # 1) verify case details on mailbox page
     mailbox_record_page_business.assert_case_details(expected)
-
-    # 2) open the email record (waits for Status label to be attached)
     custom_email_page = mailbox_record_page_business.click_email_link()
-    # custom_email_page.dump_status_debug()
-
-    # 3) optional debug — uncomment if you want HTML snippet printed
-    # custom_email_page.dump_status_debug()
-
-    # 4) assert the Status value
     custom_email_page.assert_email_status(expected="Sent")
