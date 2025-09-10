@@ -2109,3 +2109,327 @@ Call log:
 2025-09-08 14:36:58,084 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
 2025-09-08 14:37:11,670 - PlaywrightAutomation - INFO - Clicking the app launcher icon
 2025-09-08 14:37:16,158 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 13:19:27,587 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 13:19:28,897 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 13:19:37,571 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 13:19:42,648 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 13:19:46,077 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 13:20:01,498 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 13:20:05,401 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 14:17:15,645 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 14:17:17,217 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 14:17:26,176 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 14:17:31,256 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 14:17:34,505 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 14:17:49,954 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 14:17:54,022 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 14:27:09,252 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 14:27:11,655 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 14:27:18,804 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 14:27:23,861 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 14:27:27,593 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 14:27:43,689 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 14:27:47,624 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 16:10:42,263 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 16:10:44,448 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 16:10:56,187 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 16:11:01,237 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 16:11:05,000 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 16:11:19,230 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 16:11:23,528 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 16:22:09,924 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 16:22:12,380 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 16:22:19,223 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 16:22:24,274 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 16:22:27,645 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 16:22:42,011 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 16:22:45,932 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 16:26:51,115 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 16:26:53,496 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 16:27:00,123 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 16:27:05,175 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 16:27:08,630 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 16:27:23,582 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 16:27:27,443 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 16:36:52,568 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 16:36:53,873 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 16:37:00,446 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 16:37:05,506 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 16:37:08,882 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 16:37:25,023 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 16:37:29,005 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 16:42:04,036 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 16:44:14,734 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 16:44:15,867 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 16:44:21,932 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 16:44:26,969 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 16:44:30,211 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 16:44:44,069 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 16:44:48,806 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 16:52:13,370 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 16:52:15,804 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 16:52:26,054 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 16:52:31,097 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 16:52:34,346 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 16:52:50,216 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 16:52:54,643 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 16:59:52,265 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 16:59:53,847 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 17:00:00,899 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 17:00:06,340 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 17:00:11,360 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 17:00:24,588 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 17:00:28,443 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 17:22:49,481 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 17:22:50,865 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 17:23:02,459 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 17:23:07,519 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 17:23:10,865 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 17:23:27,383 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 17:23:31,481 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 17:24:12,027 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 17:24:13,978 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 17:24:20,836 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 17:24:25,909 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 17:24:30,676 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 17:24:49,242 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 17:24:53,023 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 17:29:44,175 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 17:29:45,463 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 17:29:55,812 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 17:30:00,888 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 17:30:04,301 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 17:30:19,154 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 17:30:23,646 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 17:36:07,642 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 17:36:09,057 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 17:36:15,227 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 17:36:20,280 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 17:36:24,187 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 17:36:37,151 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 17:36:41,046 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 17:40:08,963 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 17:40:10,439 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 17:40:20,185 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 17:40:25,508 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 17:40:28,814 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 17:40:39,005 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 17:40:42,886 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 17:43:08,681 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 17:43:11,075 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 17:43:17,391 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 17:43:22,465 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 17:43:25,728 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 17:43:41,118 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 17:43:45,007 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 18:19:04,586 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 18:19:05,952 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 18:19:12,553 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 18:19:17,615 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 18:19:21,525 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 18:19:40,184 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 18:19:44,253 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 19:31:25,567 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 19:31:27,539 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 19:31:36,336 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 19:31:41,419 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 19:31:45,150 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 19:31:59,306 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 19:32:03,345 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 19:41:56,662 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 19:41:59,534 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 19:42:06,146 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 19:42:11,190 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 19:42:14,743 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 19:42:27,148 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 19:42:32,108 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 19:47:49,911 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 19:47:53,334 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 19:48:00,976 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 19:48:06,028 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 19:48:12,173 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 19:48:27,868 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 19:48:31,893 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 19:50:23,220 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 19:50:25,498 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 19:50:33,323 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 19:50:38,381 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 19:50:43,109 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 19:50:54,350 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 19:50:58,420 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 19:55:38,482 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 19:55:41,350 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 19:55:50,995 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 19:55:56,064 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 19:55:59,702 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 19:56:12,809 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 19:56:16,942 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 20:19:35,720 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 20:19:37,288 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 20:19:46,467 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 20:19:51,607 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 20:19:55,620 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 20:20:11,635 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 20:20:16,585 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 20:22:17,714 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 20:22:19,478 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 20:22:28,179 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 20:22:33,290 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 20:22:37,251 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 20:22:53,826 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 20:22:58,421 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 20:25:12,812 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 20:25:14,104 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 20:25:20,514 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 20:25:25,552 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 20:25:29,122 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 20:25:39,701 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 20:25:43,772 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 20:55:30,444 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 20:55:33,542 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 20:55:43,087 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 20:55:48,200 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 20:55:53,995 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 20:56:10,111 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 20:56:14,172 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 21:22:13,152 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 21:22:14,721 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 21:22:24,991 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 21:22:30,146 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 21:22:34,633 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 21:22:49,563 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 21:22:51,909 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 21:42:57,585 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 21:42:59,083 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 21:43:06,546 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 21:43:12,088 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 21:43:15,683 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 21:43:32,788 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 21:43:35,002 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 22:13:52,309 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 22:13:54,340 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 22:14:01,086 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 22:14:06,121 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 22:14:09,585 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 22:14:23,222 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 22:14:28,129 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 22:24:54,059 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 22:24:56,204 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 22:25:04,107 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 22:25:09,190 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 22:25:12,940 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 22:25:26,720 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 22:25:30,614 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 22:26:43,733 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 22:26:45,246 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 22:26:53,076 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 22:26:58,132 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 22:27:01,878 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 22:27:15,698 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 22:27:19,782 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 22:28:23,312 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 22:28:24,827 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 22:28:31,276 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 22:28:36,340 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 22:28:39,837 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 22:28:53,806 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 22:28:57,813 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 22:41:36,849 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 22:41:39,108 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 22:41:48,631 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 22:41:53,675 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 22:41:57,289 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 22:42:12,282 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 22:42:16,407 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 22:43:17,842 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 22:43:20,891 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 22:43:28,812 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 22:43:33,895 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 22:43:37,379 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 22:43:52,274 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 22:43:56,622 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 23:02:06,697 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 23:02:08,896 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 23:02:16,817 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 23:02:21,862 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 23:02:27,051 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 23:02:41,675 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 23:02:45,641 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 23:20:54,250 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 23:20:57,179 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 23:21:04,984 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 23:21:10,054 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 23:21:13,566 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 23:21:28,695 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 23:21:32,646 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 23:22:20,829 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 23:22:23,040 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 23:22:32,002 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 23:22:37,219 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 23:22:41,319 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 23:22:54,926 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 23:22:59,092 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 23:38:03,850 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 23:38:52,897 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 23:38:57,472 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 23:39:14,780 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 23:39:19,938 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 23:39:24,486 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 23:39:43,447 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 23:39:47,975 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-09 23:42:41,467 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-09 23:42:44,008 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-09 23:42:54,327 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-09 23:42:59,548 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-09 23:43:03,381 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-09 23:43:21,833 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-09 23:43:25,612 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-10 08:38:17,365 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-10 08:38:19,490 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-10 08:38:31,645 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-10 08:38:36,725 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-10 08:38:42,799 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-10 08:39:01,423 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-10 08:39:41,023 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-10 08:39:43,751 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-10 08:39:55,948 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-10 08:40:01,027 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-10 08:40:06,244 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-10 08:40:23,527 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-10 08:40:28,108 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-10 08:42:11,672 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-10 08:42:13,415 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-10 08:42:21,960 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-10 08:42:27,089 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-10 08:42:31,744 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-10 08:42:47,289 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-10 08:42:50,760 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-10 08:55:53,610 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-10 08:55:56,094 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-10 08:56:05,632 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-10 08:56:10,679 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-10 08:56:15,965 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-10 08:56:30,014 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-10 08:56:35,112 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-10 11:05:44,036 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-10 11:06:41,940 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-10 11:06:44,943 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-10 11:06:54,097 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-10 11:06:59,158 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-10 11:07:04,259 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-10 11:07:19,339 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-10 11:07:23,180 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher
+2025-09-10 11:09:59,570 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-10 11:10:01,158 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-10 11:10:11,171 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-10 11:10:16,301 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-10 11:10:16,589 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-10 11:10:16,780 - PlaywrightAutomation - INFO - Searching for the immigration module
+2025-09-10 11:10:19,442 - PlaywrightAutomation - INFO - Selecting the immigration module
+2025-09-10 11:10:41,728 - PlaywrightAutomation - INFO - Navigate to the https://deloitteimmigration--qa.sandbox.my.salesforce.com/
+2025-09-10 11:10:43,374 - PlaywrightAutomation - INFO - Login to the application with valid username and password
+2025-09-10 11:10:51,983 - PlaywrightAutomation - INFO - Attempting to switch to Lightning...
+2025-09-10 11:10:57,064 - PlaywrightAutomation - INFO - Already in Lightning
+2025-09-10 11:11:00,790 - PlaywrightAutomation - INFO - proxy logging in as Immigration Test Business User1
+2025-09-10 11:11:14,386 - PlaywrightAutomation - INFO - Clicking the app launcher icon
+2025-09-10 11:11:18,498 - PlaywrightAutomation - INFO - Searching the IXT Mailbox APP via app launcher

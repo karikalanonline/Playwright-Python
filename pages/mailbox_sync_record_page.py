@@ -1,7 +1,12 @@
-import json
+import json, re
 from playwright.sync_api import Locator, TimeoutError, expect
 import logging, allure
 from base.base_page import BasePage
+
+# from typing import TYPE_CHECKING
+
+# if TYPE_CHECKING:
+from pages.custom_email_II_page import CustomEmailPage
 
 logger = logging.getLogger(__name__)
 
@@ -12,6 +17,7 @@ class MailboxSyncRecordPage(BasePage):
         self._by_label = (
             "div.slds-form-element:has(span.test-id__field-label:has-text('{label}'))"
         )
+        self.email_link = "h3.slds-tile__title >> a"
 
     def _value_node(self, label: str) -> Locator:
         selector = self._by_label.format(label=label)
@@ -112,3 +118,58 @@ class MailboxSyncRecordPage(BasePage):
         for field, expected_value in expected.items():
             node = self._value_node(field)
             expect(node).to_have_text(expected_value)
+
+    def click_email_link(self, timeout: int = 20_000) -> CustomEmailPage:
+        # Click the EMAIL tile link
+        self.page.locator(self.email_link, has_text="EMAIL").click()
+
+        # Try waiting for URL pattern (SPA-safe). Ignore if it doesn't happen.
+        pattern = re.compile(r".*/lightning/r/Custom_Email_2__c/.*")
+        try:
+            self.page.wait_for_url(pattern, timeout=8_000)
+        except Exception:
+            pass
+
+        # Wait for a unique email-page label to be attached.
+        # Prefer 'Custom Email Number' (likely unique). If not present, wait for 'Email Status'.
+        unique_selectors = [
+            "span.test-id__field-label:has-text('Custom Email Number')",
+            "span.test-id__field-label:has-text('Email Status')",
+            # last-resort: any 'Email' section header
+            "h1:has-text('Email'), h1:has-text('Custom Email')",
+        ]
+
+        for sel in unique_selectors:
+            try:
+                # use .first to avoid strict mode errors
+                self.page.locator(sel).first.wait_for(state="attached", timeout=4000)
+                # once found, break out
+                break
+            except Exception:
+                continue
+
+        # final stabilization
+        try:
+            self.page.wait_for_load_state("networkidle", timeout=3_000)
+        except Exception:
+            pass
+
+        return CustomEmailPage(self.page)
+
+    # def click_email_link(self, timeout: int = 15_000):
+    #     # click the email tile link
+    #     self.page.locator(self.email_link, has_text="EMAIL").click()
+    #     # wait for the URL to match the email record pattern (SPA friendly)
+    #     pattern = re.compile(r".*/lightning/r/Custom_Email_2__c/.*")
+    #     self.page.wait_for_url(pattern, timeout=timeout)
+    #     # optionally wait for network idle or a unique element
+    #     self.page.wait_for_load_state("networkidle", timeout=7_000)
+    #     from pages.custom_email_II_page import CustomEmailPage
+
+    #     return CustomEmailPage(self.page)
+
+    # # def click_email_link(self) -> CustomEmailPage:
+    # #     # click and wait for navigation; adapt if your page uses a pushState update
+    # #     with self.page.expect_navigation():
+    # #         self.page.locator(self.email_link, has_text="EMAIL").click()
+    # #     return CustomEmailPage(self.page)

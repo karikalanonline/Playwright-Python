@@ -1,6 +1,4 @@
-import pytest, re, os
-import allure
-import json
+import pytest, re, os, allure, json
 from playwright.sync_api import Playwright, Page, expect
 from pages.login_page import LoginPage
 from utils import config
@@ -10,6 +8,7 @@ from data import test_data
 from pages.ixt_webform_home_page import IxtWebFormHomePage
 from pages.salesforce_admin_page import SalesforceAdminPage
 from pages.mailbox_sync_record_page import MailboxSyncRecordPage
+from pages.custom_email_II_page import CustomEmailPage
 
 
 # The below snippet will take the screenshot on failure
@@ -141,16 +140,8 @@ def ixt_webform_nominee(sf_home_page: SalesforceHomePage) -> IxtWebFormHomePage:
     return ixt_webform
 
 
-# @pytest.fixture
-# def ixt_webform_business(proxy_business_user: SalesforceHomePage) -> IxtWebFormHomePage:
-#     proxy_business_user.click_app_launcher()
-#     ixt_mailbox = proxy_business_user.search_and_select_ixt_mailbox_app()
-#     ixt_webform = ixt_mailbox.search_and_select_ixt_webform()
-#     return ixt_webform
-
-
 @pytest.fixture
-def ixt_mailbox_business(
+def mailbox_record_page_business(
     proxy_business_user: SalesforceHomePage, inquiry_number
 ) -> MailboxSyncRecordPage:
     proxy_business_user.click_app_launcher()
@@ -161,6 +152,14 @@ def ixt_mailbox_business(
     )
     # mailbox_sync_record_page.assert_case_details()
     return mailbox_sync_record_page
+
+
+@pytest.fixture
+def custom_email_page(
+    mailbox_record_page_business: MailboxSyncRecordPage,
+) -> CustomEmailPage:
+    custom_email_page = mailbox_record_page_business.click_email_link()
+    return custom_email_page
 
 
 @pytest.fixture()
