@@ -121,12 +121,45 @@ def _video_trace(page: Page, request):
         page.context.tracing.stop()
 
 
+def get_sf_credentials_from_env():
+    return [
+        {
+            "user": os.getenv("sf1_user", config.USERNAME),
+            "password": os.getenv("sf1_password", config.PASSWORD),
+        },
+        {
+            "user": os.getenv("sf2_user", config.USERNAME),
+            "password": os.getenv("sf2_password", config.PASSWORD),
+        },
+    ]
+
+
+# @pytest.fixture
+# def sf_home_page(request, page: Page) -> SalesforceHomePage:
+#     with allure.step("preconditon: Login and switch to lightning"):
+#         login_Page = LoginPage(page)
+#         login_Page.navigate_to(config.BASE_URL)
+#         sf_home_page = login_Page.login(config.USERNAME, config.PASSWORD)
+#         sf_home_page.switch_to_lightning()
+#         expect(page.locator(sf_home_page.home_tab)).to_be_visible()
+#         return sf_home_page
+
+
 @pytest.fixture
-def sf_home_page(page: Page) -> SalesforceHomePage:
-    with allure.step("preconditon: Login and switch to lightning"):
+def sf_home_page(request, page: Page) -> SalesforceHomePage:
+    # if used normally (no param), it logs with config.USERNAME/config.PASSWORD
+    # if used with indirect param, request.param must be dict: {"user":..., "password"..}
+    if hasattr(request, "param") and isinstance(request.param, dict):
+        creds = request.param
+    else:
+        creds = {
+            "user": os.getenv("sf_user", getattr(config, "USERNAME")),
+            "password": os.getenv("sf_password", getattr(config, "PASSWORD")),
+        }
+    with allure.step(f"preconditon: Login as {creds['user']} and switch to lightning"):
         login_Page = LoginPage(page)
         login_Page.navigate_to(config.BASE_URL)
-        sf_home_page = login_Page.login(config.USERNAME, config.PASSWORD)
+        sf_home_page = login_Page.login(creds["user"], creds["password"])
         sf_home_page.switch_to_lightning()
         expect(page.locator(sf_home_page.home_tab)).to_be_visible()
         return sf_home_page
