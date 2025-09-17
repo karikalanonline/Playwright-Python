@@ -3,7 +3,7 @@ import pytest
 from pages.mailbox_sync_record_page import MailboxSyncRecordPage
 from pages.custom_email_II_page import CustomEmailPage
 
-with open("data/case_details.json") as f:
+with open("data/web_form_values.json") as f:
     case_details = json.load(f)
 
 

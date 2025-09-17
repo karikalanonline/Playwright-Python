@@ -2,6 +2,8 @@ import pytest, re, os, allure, json
 from playwright.sync_api import Playwright, Page, expect
 from pages.login_page import LoginPage
 from utils import config
+from utils.date_utils import date_from_value
+from pathlib import Path
 from pages.salesforce_home_page import SalesforceHomePage
 from pages.immi_home_page import ImmigrationHomePage
 from data import test_data
@@ -9,6 +11,83 @@ from pages.ixt_webform_home_page import IxtWebFormHomePage
 from pages.salesforce_admin_page import SalesforceAdminPage
 from pages.mailbox_sync_record_page import MailboxSyncRecordPage
 from pages.custom_email_II_page import CustomEmailPage
+
+BASE = Path(
+    __file__
+).parent.parent  # adjust if conftest is at project root under tests/
+COMMON_PATH = BASE / "data" / "common_data.json"
+TESTDATA_PATH = Path(__file__).resolve().parent / "data" / "web_form_values.json"
+print("DEBUG: Looking for web_form_values.json at:", TESTDATA_PATH)
+
+
+def load_json(path: Path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def pytest_addoption(parser):
+    """
+    Add a command-line option '--tc' to pass a single test-case id or
+    multiple comma-separated ids: --tc=TC-100 or --tc=TC-100,TC-200
+    """
+    parser.addoption(
+        "--tc",
+        action="store",
+        default="",
+        help="Run only the test data record(s) matching the TC id(s), comma separated.",
+    )
+
+
+def _normalize_key(k: str) -> str:
+    # convert "Upcoming Travel Start Date" -> "upcoming_travel_start"
+    s = k.strip()
+    s = s.replace("-", " ").replace("/", " ")
+    s = re.sub(r"\s+", "_", s)  # spaces -> _
+    s = re.sub(r"[^0-9a-zA-Z_]", "", s)  # drop other punctuation
+    return s.lower()
+
+
+def pytest_generate_tests(metafunc):
+    # only parametrize tests that request 'data'
+    if "data" not in metafunc.fixturenames:
+        return
+
+    common = load_json(COMMON_PATH) if COMMON_PATH.exists() else {}
+    all_data = load_json(TESTDATA_PATH)
+
+    tc_option = metafunc.config.option.tc.strip()
+    if tc_option:
+        wanted = {s.strip() for s in tc_option.split(",") if s.strip()}
+        filtered = [d for d in all_data if d.get("tc_id") in wanted]
+        if not filtered:
+            raise pytest.UsageError(
+                f"No test data found for tc id(s): {', '.join(wanted)}"
+            )
+        param_list = filtered
+    else:
+        param_list = all_data
+
+    prepared = []
+    ids = []
+    for d in param_list:
+        # create merged copy: start with common, update with per-test
+        merged = dict(common)  # shallow copy of common
+        merged.update(d)  # per-test overrides common
+        # normalize keys if you used mixed-case in JSON (optional)
+        # convert date offsets (if present)
+        if merged.get("upcoming_travel_start"):
+            merged["upcoming_travel_start_formatted"] = date_from_value(
+                merged["upcoming_travel_start"], "%m/%d/%Y"
+            )
+        if merged.get("upcoming_travel_end"):
+            merged["upcoming_travel_end_formatted"] = date_from_value(
+                merged["upcoming_travel_end"], "%m/%d/%Y"
+            )
+
+        prepared.append(merged)
+        ids.append(merged.get("tc_id", "no-id"))
+
+    metafunc.parametrize("data", prepared, ids=ids)
 
 
 # The below snippet will take the screenshot on failure
@@ -134,17 +213,6 @@ def get_sf_credentials_from_env():
     ]
 
 
-# @pytest.fixture
-# def sf_home_page(request, page: Page) -> SalesforceHomePage:
-#     with allure.step("preconditon: Login and switch to lightning"):
-#         login_Page = LoginPage(page)
-#         login_Page.navigate_to(config.BASE_URL)
-#         sf_home_page = login_Page.login(config.USERNAME, config.PASSWORD)
-#         sf_home_page.switch_to_lightning()
-#         expect(page.locator(sf_home_page.home_tab)).to_be_visible()
-#         return sf_home_page
-
-
 @pytest.fixture
 def sf_home_page(request, page: Page) -> SalesforceHomePage:
     # if used normally (no param), it logs with config.USERNAME/config.PASSWORD
@@ -209,19 +277,21 @@ def proxy_business_user(sf_admin_page: SalesforceAdminPage, common_data):
 
 
 @pytest.fixture(scope="function")
-def inquiry_number(request) -> str:
+def get_inquiry_number(request, data, ixt_webform_nominee) -> str:
     file = os.path.join("data", "inquiry.json")
     if os.path.exists(file) and os.path.getsize(file) > 0:
-        with open(file) as f:
-            try:
-                return json.load(f)["inquiry"]
-            except json.JSONDecodeError:
-                pass
+        try:
+            with open(file, "r", encoding="utf-8") as f:
+                val = json.load(f).get("inquiry")
+                if val:
+                    return val
+        except json.JSONDecodeError:
+            pass
 
-    ixt_webform_nominee = request.getfixturevalue("ixt_webform_nominee")
-    inquiry = ixt_webform_nominee.fill_form()
+    # ixt_webform_nominee is already a fixture param (page object)
+    inquiry = ixt_webform_nominee.fill_form(data)  # pass the data dict
 
-    with open(file, "w") as f:
+    with open(file, "w", encoding="utf-8") as f:
         json.dump({"inquiry": inquiry}, f)
 
     return inquiry

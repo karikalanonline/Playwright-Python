@@ -1,0 +1,21 @@
+[
+    {
+        "tc_id": "TC-5788780",
+        "requestor_type": "Myself and/or dependent(s)",
+        "category": "H-1B Cap Sponsorship",
+        "subcategory_1": "Status of case"
+    },
+
+    {
+        "tc_id": "TC-5632445",
+        "requestor_type": "Myself and/or dependent(s)",
+        "category": "Business International travel related inquiries",
+        "subcategory_1": "General Global Visa Desk Inquiry",
+        "permiso_online_assessment": "No",
+        "country_of_travel_1": "Australia",
+        "country_of_travel_2": "Austria",
+        "country_of_travel_3": "Belarus",
+        "upcoming_travel_start": "+7",
+        "upcoming_travel_end": "+14"
+    }
+]
