@@ -11,6 +11,10 @@ class MailboxSyncHomePage(BasePage):
             "input.slds-input[placeholder='Search...'][type='search']"
         )
         self.list_search = "input.slds-input[placeholder='Search...'][type='search']"
+        self.picklist_icon = (
+            "button[title ='Select a List View: Immigration Mailbox Sync']"
+        )
+        self.search_box = "input[role ='combobox']"
 
     def select_ixt_record(self, inquiry_number: str):
         inquiry_number = self.page.locator(f"a[title='{inquiry_number}'")
@@ -18,16 +22,26 @@ class MailboxSyncHomePage(BasePage):
             self.click_element(inquiry_number)
         return MailboxSyncRecordPage(self.page)
 
-    # def open_ixt_record_business(self, record_id: str, timeout=30_000):
-    #     expect(self.page.locator(self.global_search_button)).to_be_visible()
-    #     self.page.locator(self.global_search_button).click()
-    #     global_search = self.page.locator(self.global_search_button).first
-    #     global_search.type(record_id, delay=90)
-    #     self.page.locator(f"mark[class='data-match']:has-text('{record_id}')").click()
-    #     return MailboxSyncRecordPage(self.page)
+    def go_to_list_view(self, list_view_name: str):
+        self.page.pause()
+        self.click_element(self.picklist_icon)
+        self.click_element(self.search_box)
+        # self.fill(self.search_box, list_view_name)
+        self.type(self.search_box, list_view_name)
+        list_view = self.page.locator(
+            f"div.slds-listbox lightning-base-combobox-formatted-text:has-text('{list_view_name}')"
+        )
+        self.click_element(list_view)
+
+    def assert_list_view_loaded(self, list_view_name: str, timeout: int = 10_000):
+        header = self.page.locator(
+            f"span.slds-page-header__title:has-text('{list_view_name}')"
+        )
+        expect(header).to_be_visible(timeout=timeout)
 
     def open_ixt_record_business(self, record_id: str, timeout: int = 30_000):
         # 1) Open global search
+        # self.page.wait_for_timeout(3000)
         btn = self.page.locator(self.global_search_button)
         expect(btn).to_be_visible()
         btn.click()
@@ -38,6 +52,7 @@ class MailboxSyncHomePage(BasePage):
         box.click()
         box.fill("")  # clear any residue
         box.type(record_id, delay=60)
+
         with self.page.expect_navigation():
             self.page.locator(
                 f"mark[class='data-match']:has-text('{record_id}')"

@@ -28,6 +28,9 @@ class SalesforceAdminPage(BasePage):
         if self.page.locator("text=Your session has ended").is_visible(timeout=5000):
             logger.warning("Session expired popup appeared - clicking login button")
             self.page.locator("button:has-text('Log In')").click()
+
+        print("DEBUG: page url after proxy login:", self.page.url)
+        print("DEBUG: pages:", [p.url for p in self.page.context.pages])
         from pages.salesforce_home_page import SalesforceHomePage
 
         return SalesforceHomePage(self.page)

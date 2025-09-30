@@ -147,22 +147,6 @@ class IxtWebFormHomePage(BasePage):
         with self.page.expect_navigation():
             self.page.go_back()
 
-    # def fill_form(self):
-    #     self.assert_name(test_data.name)
-    #     self.assert_email(test_data.email)
-    #     self.click_dropdown("Requestor Type")
-    #     self.select_option("Myself and/or dependent(s)")
-    #     self.click_dropdown("Category")
-    #     self.select_option("H-1B Cap Sponsorship")
-    #     self.click_dropdown("Subcategory 1")
-    #     self.select_option("Status of case")
-    #     self.enter_inquiry()
-    #     self.click_submit_button()
-    #     self.click_confirm_yes()
-    #     self.assert_success_message()
-    #     inquiry_number = self.get_inquiry_number()
-    #     return inquiry_number
-
     def fill_form(self, data: dict):
         self.assert_name(test_data.name)
         self.assert_email(test_data.email)

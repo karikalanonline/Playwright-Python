@@ -24,6 +24,7 @@ class SalesforceHomePage(BasePage):
         self.ixt_mailbox_app = "p[class='slds-truncate']:has-text('IXT Mailbox App')"
         self.gear_icon = "div.setupGear"
         self.setup_option = "#related_setup_app_home"
+        self.mailbox_sync_tab = "#IMG_Mailbox_Sync__c"
 
     def switch_to_lightning(self):
         logger.info("Attempting to switch to Lightning...")
@@ -66,3 +67,13 @@ class SalesforceHomePage(BasePage):
             self.click_element(self.setup_option)
         setup_page = new_page_info.value
         return SalesforceAdminPage(setup_page)
+
+    def click_mailbox_sync_tab(self):
+        logger.info("Searching the Immigration mailbox sync tab via app launcher")
+        self.page.get_by_label("Search apps and items...").fill(
+            "Immigration Mailbox Sync"
+        )
+        self.page.wait_for_selector(self.mailbox_sync_tab)
+        self.page.locator(self.mailbox_sync_tab).click()
+        self.page.wait_for_load_state("networkidle")
+        return MailboxSyncHomePage(self.page)

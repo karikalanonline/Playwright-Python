@@ -1,5 +1,9 @@
 {
     "Business_user_name_1": "Immigration Test Business User1",
+    "non_us_outbound_team_member": "Arun Kumar",
     "name": "Karikalan venkatachalam",
-    "email": "karvenkatachalam@deloitte.com"
+    "email": "karvenkatachalam@deloitte.com",
+    "list_view_name": {"US Outbound - Open cases": "US Outbound - Open cases", 
+    "General Inquiries": "US Outbound - General Inquiries", "Master Case List": "US Outbound -Master case list (all)",
+    "All": "All", "Closed Inquiries": "Closed Inquiries"}
 }

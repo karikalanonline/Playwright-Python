@@ -3,14 +3,7 @@
   "Source": "Form",
   "Category": "H-1B Cap Sponsorship",
   "SubCategory 1": "Status of case",
-  "Owner": "IXTQueue",
+  "Owner": "US H-1B Cap Queue",
   "Case Status": "New"
-  
-},
- "TC-5632445": {
-  "Source": "Form",
-  "Category": "L-1 Visa Inquiry",
-  "SubCategory 1": "Case delay",
-  "Case Status": "Pending"
-}
+} 
 }
