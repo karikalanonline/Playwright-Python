@@ -5,5 +5,5 @@ from utils import config
 from pages.salesforce_home_page import SalesforceHomePage
 
 
-def verify_Home_page(sf_home: SalesforceHomePage):
-    sf_home.assert_on_home()
+def test_verify_Home_page(sf_home_page: SalesforceHomePage):
+    sf_home_page.assert_on_home_tab()

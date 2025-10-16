@@ -20,7 +20,7 @@ class SalesforceHomePage(BasePage):
         self.switch_to_lightning_link = (
             "div.navLinks div.linkElements a.switch-to-lightning"
         )
-        self.immigration = ":text-is('Immigration')"
+        self.immigration = "a[data-label='Immigration']"
         self.ixt_mailbox_app = "p[class='slds-truncate']:has-text('IXT Mailbox App')"
         self.gear_icon = "div.setupGear"
         self.setup_option = "#related_setup_app_home"
@@ -58,8 +58,8 @@ class SalesforceHomePage(BasePage):
         self.page.wait_for_load_state("domcontentloaded")
         return ImmigrationHomePage(self.page)
 
-    def assert_on_home(self):
-        expect(self.page.locator(self.home_tab)).to_be_visible()
+    def assert_on_home_tab(self):
+        expect(self.page.locator(self.home_tab)).not_to_be_visible()
 
     def go_to_admin_page(self):
         self.click_element(self.gear_icon)

@@ -15,6 +15,11 @@ class MailboxSyncHomePage(BasePage):
             "button[title ='Select a List View: Immigration Mailbox Sync']"
         )
         self.search_box = "input[role ='combobox']"
+        self.img_request_number = "th[data-label='IMG Request Number']"
+        # self.record_type_value = "div.slds-form-element:has(span.test-id__field-label:has-text('Record Type')) div.recordTypeName span"
+        self.record_type = (
+            "div div div span[class='test-id__field-label']:has-text('Record Type')"
+        )
 
     def select_ixt_record(self, inquiry_number: str):
         inquiry_number = self.page.locator(f"a[title='{inquiry_number}'")
@@ -23,7 +28,6 @@ class MailboxSyncHomePage(BasePage):
         return MailboxSyncRecordPage(self.page)
 
     def go_to_list_view(self, list_view_name: str):
-        self.page.pause()
         self.click_element(self.picklist_icon)
         self.click_element(self.search_box)
         # self.fill(self.search_box, list_view_name)
@@ -59,3 +63,21 @@ class MailboxSyncHomePage(BasePage):
             ).click()
         self.page.wait_for_timeout(5000)
         return MailboxSyncRecordPage(self.page)
+
+    def open_first_n_records(self, n=2):
+        records = self.page.locator(self.img_request_number)
+        count = records.count()
+        print(f"Total record count is {count}")
+        record_types = []
+
+        for i in range(min(n, count)):
+            record_link = records.nth(i)
+            record_link.click()
+            self.page.wait_for_load_state("networkidle")
+            self.page.locator(self.record_type).scroll_into_view_if_needed()
+            value = self.get_field_value("Record Type")
+            print(f"The field value is {value}")
+            record_types.append(value)
+            self.page.go_back()
+            self.page.wait_for_load_state("networkidle")
+        return record_types

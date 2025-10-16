@@ -19,7 +19,7 @@ class ImmigrationHomePage(BasePage):
     #         link.click()
     #     return ImmigrationRecordPage(self.page)
 
-    def click_immigration_record(self):
+    def open_immigration_record(self):
         single = self.page.locator(self.immigration_name).first
         expect(single).to_be_visible(timeout=5000)
         single.click()

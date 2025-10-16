@@ -1,5 +1,4 @@
 immigration_home_url = "https://deloitteimmigration--qa.sandbox.lightning.force.com/lightning/o/WCT_Immigration__c/home"
 immigration_record_id = "I-23357"
 immigration_cap_nominee_value = "Yes"
-name = "Karikalan venkatachalam"
-email = "karvenkatachalam@deloitte.com"
+

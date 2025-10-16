@@ -9,7 +9,7 @@ from utils import report_helper
 from pages.immi_home_page import ImmigrationHomePage
 
 
-# @pytest.mark.e2e
+@pytest.mark.e2e
 def test_e2e_flow(immigration_home: ImmigrationHomePage, immigration_record_data):
     with immigration_home.page.expect_navigation():
         immi_record_page = immigration_home.click_immigration_record()

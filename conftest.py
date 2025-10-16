@@ -305,19 +305,17 @@ def mailbox_record_page_business(
         raise RuntimeError("No inquiry id found in data/inquiry.json")
     proxy_user_login.switch_to_lightning()
     proxy_user_login.click_app_launcher()
-    # proxy_user_login.search_and_select_ixt_mailbox_app()
     ixt_mailbox_sync_home = proxy_user_login.click_mailbox_sync_tab()
-    # ixt_mailbox = proxy_user_login.search_and_select_ixt_mailbox_app()
-    # ixt_mailbox_sync_home = ixt_mailbox.click_mailbox_sync_tab()
     mailbox_sync_record_page = ixt_mailbox_sync_home.open_ixt_record_business(
         inquiry_id
     )
-    # mailbox_sync_record_page.assert_case_details()
     return mailbox_sync_record_page
 
 
 @pytest.fixture
-def select_list_view(proxy_mailbox_sync_home_page, common_data, request):
+def select_list_view(
+    proxy_mailbox_sync_home_page, common_data, request
+) -> MailboxSyncHomePage:
     mapping = common_data.get("list_view_name", {})
     key = getattr(request, "param", None) or "All"
     list_view_name = mapping.get(key, key)
@@ -400,7 +398,7 @@ def clear_inquiry_key():
 
 
 @pytest.fixture(scope="function")
-def get_inquiry_number(request, data) -> str:
+def get_inquiry_number(request, data, clear_inquiry_key) -> str:
     file = os.path.join("data", "inquiry.json")
     if os.path.exists(file) and os.path.getsize(file) > 0:
         try:
@@ -433,173 +431,3 @@ def get_inquiry_number(request, data) -> str:
 #         return mailbox_sync_home_page
 
 #     return _select
-
-# @pytest.fixture
-# def proxy_business_user(sf_admin_page: SalesforceAdminPage, common_data):
-#     username = common_data["Business_user_name_1"]
-#     sf_proxy_home_page = sf_admin_page.proxy_login(username)
-#     return sf_proxy_home_page
-
-# @pytest.fixture
-# def mailbox_record_page_business(
-#     proxy_business_user: SalesforceHomePage,
-# ) -> MailboxSyncRecordPage:
-#     file = os.path.join("data", "inquiry.json")
-#     inquiry_id = None
-#     if os.path.exists(file) and os.path.getsize(file) > 0:
-#         try:
-#             with open(file, "r", encoding="utf-8") as f:
-#                 inquiry_id = json.load(f).get("inquiry")
-#         except Exception:
-#             pass
-
-#     if not inquiry_id:
-#         raise RuntimeError("No inquiry id found in data/inquiry.json")
-#     proxy_business_user.click_app_launcher()
-#     ixt_mailbox = proxy_business_user.search_and_select_ixt_mailbox_app()
-#     ixt_mailbox_sync_home = ixt_mailbox.click_mailbox_sync_tab()
-#     mailbox_sync_record_page = ixt_mailbox_sync_home.open_ixt_record_business(
-#         inquiry_id
-#     )
-#     # mailbox_sync_record_page.assert_case_details()
-#     return mailbox_sync_record_page
-
-# INQUIRY_FILE = Path(__file__).parent / "data" / "inquiry.json"
-
-
-# def _read_inquiry_mapping():
-#     if not INQUIRY_FILE.exists() or INQUIRY_FILE.stat().st_size == 0:
-#         return {}
-#     try:
-#         return json.loads(INQUIRY_FILE.read_text(encoding="utf-8")) or {}
-#     except Exception:
-#         return {}
-
-
-# def _write_inquiry_mapping(mapping: dict):
-#     tmp = INQUIRY_FILE.with_suffix(".tmp")
-#     INQUIRY_FILE.parent.mkdir(parents=True, exist_ok=True)
-#     with tmp.open("w", encoding="utf-8") as f:
-#         json.dump(mapping, f, indent=2)
-#         f.flush()
-#         os.fsync(f.fileno())
-#     tmp.replace(INQUIRY_FILE)
-
-
-# @pytest.fixture(scope="function", name="inquiry_number")
-# def inquiry_number_always_submit(data, ixt_webform_nominee) -> str:
-#     """
-#     ALWAYS submit the webform for the given test data 'data' (function-scoped).
-#     After submission persist mapping:
-#        { "<tc_id>": "<IXT-...>", "_latest": "<IXT-...>" }
-#     Return the created inquiry id (the created/current one).
-#     """
-#     tc = data.get("tc_id")
-#     if not tc:
-#         raise RuntimeError("test data must include 'tc_id'")
-
-#     # 1) Submit the form (always)
-#     new_inquiry = ixt_webform_nominee.fill_form(data)
-#     if not new_inquiry:
-#         raise RuntimeError("fill_form did not return an inquiry id")
-
-#     # 2) Persist mapping: per-tc and also update special "_latest"
-#     mapping = _read_inquiry_mapping()
-#     mapping[tc] = new_inquiry
-#     mapping["_latest"] = new_inquiry
-#     _write_inquiry_mapping(mapping)
-
-#     # (optional) navigate back so the same tab returns to SF UI (helps proxy logic)
-#     try:
-#         # ixt_webform_nominee.go_back_to_salesforce_page() should exist on your page object
-#         ixt_webform_nominee.go_back_to_salesforce_page()
-#         ixt_webform_nominee.page.wait_for_load_state("domcontentloaded", timeout=10000)
-#     except Exception:
-#         # best-effort, not fatal
-#         pass
-
-#     return new_inquiry
-
-
-# @pytest.fixture(scope="session", name="latest_inquiry_id")
-# def latest_inquiry_id_fixture():
-#     """
-#     Return the latest stored inquiry id from data/inquiry.json (session-scoped).
-#     If file missing or key missing, returns None.
-#     """
-#     mapping = _read_inquiry_mapping()
-#     return mapping.get("_latest")
-
-
-# # helper to get mapping within tests/fixtures
-# @pytest.fixture(scope="session", name="inquiry_mapping")
-# def inquiry_mapping_fixture():
-#     return _read_inquiry_mapping()
-
-
-# @pytest.fixture
-# def proxy_business_user(sf_admin_page: SalesforceAdminPage, common_data):
-#     username = common_data["Business_user_name_1"]
-#     # call proxy_login which probably triggered a new tab
-#     sf_admin_page.proxy_login(
-#         username
-#     )  # keep if it performs click; may not return the new page
-
-#     # get the newest page in the same context
-#     pages = sf_admin_page.page.context.pages
-#     new_page = pages[-1]  # usually the last page is the newly opened one
-#     sf_proxy_home_page = SalesforceHomePage(new_page)
-#     sf_proxy_home_page.switch_to_lightning()
-#     return sf_proxy_home_page
-
-
-# @pytest.fixture
-# def proxy_business_user(sf_admin_page: "SalesforceAdminPage", common_data):
-#     username = common_data["Business_user_name_1"]
-
-#     # call proxy_login which performs actions and returns SalesforceHomePage(self.page)
-#     # we call it for its side-effect (login as the proxy user)
-#     sf_admin_page.proxy_login(username)
-
-#     # pick the candidate page from context (pages[-1] as you prefer)
-#     pages = sf_admin_page.page.context.pages
-#     # prefer a page that looks like Lightning home, else fallback to last page
-#     proxy_page = None
-#     for p in reversed(pages):
-#         try:
-#             u = p.url
-#         except Exception:
-#             continue
-#         if "lightning" in u and "/home" in u:
-#             proxy_page = p
-#             break
-#     if proxy_page is None:
-#         proxy_page = pages[-1]
-
-#     # ensure Playwright focuses the proxy page/tab
-#     try:
-#         proxy_page.bring_to_front()
-#     except Exception:
-#         pass
-
-#     sf_proxy_home_page = SalesforceHomePage(proxy_page)
-#     try:
-#         pw_expect(proxy_page.locator(sf_proxy_home_page.home_tab)).to_be_visible(
-#             timeout=15000
-#         )
-#     except Exception:
-#         # best-effort debug print
-#         print(
-#             "DEBUG: proxy_business_user: home_tab not visible after proxy_login. pages:",
-#             [p.url for p in pages],
-#         )
-
-#     return sf_proxy_home_page
-
-# def _read_inquiry_mapping():
-#     if not INQUIRY_FILE.exists() or INQUIRY_FILE.stat().st_size == 0:
-#         return {}
-#     try:
-#         return json.loads(INQUIRY_FILE.read_text(encoding="utf-8")) or {}
-#     except Exception:
-#         return {}

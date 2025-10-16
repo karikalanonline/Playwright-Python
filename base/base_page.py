@@ -87,22 +87,71 @@ class BasePage:
         expect(self.page.locator(self.app_launcher_icon)).to_be_visible(timeout=8000)
         self.page.locator(self.app_launcher_icon).click()
 
-    # def click_app_launcher(self):
-    #     # debug print is optional but helpful during verification
-    #     try:
-    #         print(
-    #             "DEBUG: clicking app launcher on page id",
-    #             id(self.page),
-    #             "url",
-    #             self.page.url,
-    #         )
-    #     except Exception:
-    #         pass
+    def get_field_value(self, label: str, timeout: int = 10_000) -> str:
+        """
+        Given a visible field label (e.g. 'Record Type'), return the displayed value text.
+        Works for:
+          - standard static fields inside span.test-id__field-value
+          - record type rendered inside div.recordTypeName > span
+          - fields rendered inside slots/other nested LWC components
 
-    #     # use the exact selector your app needs
-    #     self.page.locator(
-    #         "button[aria-label='App Launcher'], button[title='App Launcher']"
-    #     ).click()
+        Raises:
+          TimeoutError if label not found within timeout or value cannot be located.
+        """
+        # 1) locate the label (anchor)
+        label_locator = self.page.locator(
+            "span.test-id__field-label", has_text=label
+        ).first
+        try:
+            label_locator.wait_for(state="visible", timeout=timeout)
+        except TimeoutError:
+            raise TimeoutError(
+                f"Label '{label}' not found or not visible within {timeout}ms"
+            )
 
-    # optionally wait for the launcher modal / grid to appear
-    # self.page.locator("div[role='dialog'] >> text=All Apps").wait_for(state="visible", timeout=8000)
+        # 2) get the nearest slds-form-element (ancestor) container
+        # use xpath to climb up to the form element
+        container = label_locator.locator(
+            "xpath=ancestor::div[contains(@class,'slds-form-element')]"
+        ).first
+
+        # 3) Try multiple candidate locators for the value (order matters)
+        candidates = [
+            "span.test-id__field-value",  # normal static value
+            "div.recordTypeName span",  # Record Type special renderer
+            ".//slot[@name='outputField']//div//span",  # nested inside slot -> records-record-type -> div -> span
+            ".//span[contains(@class,'test-id__field-value')]//span",  # nested span inside the value container
+            ".//span[normalize-space() and string-length(normalize-space(.))>0]",  # any non-empty span fallback
+        ]
+
+        for sel in candidates:
+            # if selector starts with xpath-like prefix, pass as xpath by using locator("xpath=...")
+            if sel.startswith(".//") or sel.startswith("//"):
+                value_loc = container.locator(f"xpath={sel}")
+            else:
+                # prefer css selector
+                value_loc = container.locator(sel)
+
+            try:
+                # wait short time for the candidate to appear - some components render slower
+                value_loc.wait_for(state="attached", timeout=1200)
+            except Exception:
+                # candidate not attached quickly — continue to next
+                continue
+
+            # get first non-empty match
+            count = value_loc.count()
+            if count == 0:
+                continue
+
+            # iterate matches and return first non-empty inner_text
+            for i in range(count):
+                text = value_loc.nth(i).inner_text().strip()
+                if text:
+                    # self._log(
+                    #     f"Found value for '{label}' using selector '{sel}': {text}"
+                    # )
+                    return text
+
+        # if we reach here, none of the candidates returned text
+        raise Exception(f"Unable to find value for label '{label}' — DOM may differ.")
